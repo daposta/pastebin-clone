@@ -9,6 +9,6 @@ Carbon Senior Engineer Assignment
 
 
 # Endpoints
-To get all content : GET /api/content
-To get specific content: GET /api/content/:shortUrl
-To create content: POST /api/content
+1. To get all content : GET /api/content
+2. To get specific content: GET /api/content/:shortUrl
+3. To create content: POST /api/content
