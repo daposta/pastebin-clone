@@ -10,10 +10,12 @@ const createContent = async (req, res) => {
   const data = req.body;
 
   const content = await Content.create(data);
-
+  const host = req.get("host");
+  const origin = req.get("origin");
+  console.log(host, origin);
   res.status(201).json({
     message: "Content saved",
-    data: `${req.headers.origin}/${content.shortenedUrl}`,
+    data: `${host}/${content.shortenedUrl}`,
   });
 };
 
