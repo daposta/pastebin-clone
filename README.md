@@ -6,6 +6,7 @@ Carbon Senior Engineer Assignment
 2. Run 'npm install'
 3. I am using mongodb on the atlas could and you would need to create an account and create a database there and pass address in your environment variable.
 4. Run 'node start' to start the application
+5. Run 'npm test' to run tests
 
 
 # Endpoints

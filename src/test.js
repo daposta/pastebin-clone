@@ -29,6 +29,12 @@ describe("Create Content", () => {
     });
     expect(res.statusCode).toBe(201);
   });
+
+  it("should fetch all posts", async () => {
+    const res = await supertest(app).get("/api/content");
+    expect(res.statusCode).toBe(200);
+    expect(Array.isArray(res.body.data)).toBeTruthy();
+  });
 });
 
 // describe("Post Endpoints", () => {
@@ -45,6 +51,7 @@ describe("Create Content", () => {
 
 // });
 // test("GET All Content", async () => {
+
 //   await supertest(app)
 //     .get("/api/content")
 //     .expect(200)
