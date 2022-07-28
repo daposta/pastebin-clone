@@ -13,7 +13,6 @@ const runProcess = async () => {
     let resultInMinutes = Math.round(difference / 60000);
 
     if (resultInMinutes >= item.expiration) {
-      console.log("found match");
       // await item.delete();
       await deleteContent(item._id);
     }

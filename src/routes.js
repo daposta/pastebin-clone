@@ -6,12 +6,7 @@ const router = express.Router();
 router.get("/content", fetchContent);
 router.post(
   "/content",
-  body("title")
-    .not()
-    .isEmpty()
-    .trim()
-    .escape()
-    .withMessage("Title is required "),
+
   body("text").not().isEmpty().trim().escape().withMessage("Text is required"),
   body("expiration")
     .not()
