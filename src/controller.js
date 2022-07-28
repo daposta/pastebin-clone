@@ -11,7 +11,10 @@ const createContent = async (req, res) => {
 
   const content = await Content.create(data);
 
-  res.status(201).json({ message: "Content saved", data: content.shortUrl });
+  res.status(201).json({
+    message: "Content saved",
+    data: `${req.headers.origin}/${content.shortenedUrl}`,
+  });
 };
 
 const getContent = async (req, res) => {
@@ -19,7 +22,7 @@ const getContent = async (req, res) => {
   // if (!shortid.isValid(shortUrl)) {
   //   return res.status(400).json({ message: "Invalid ID sent", data: {} });
   // }
-  const content = await Content.findOne({ shortUrl: shortUrl });
+  const content = await Content.findOne({ shortenedUrl: shortUrl });
   if (!content) {
     return res.status(400).json({ message: "Content not found", data: {} });
   }
