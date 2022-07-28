@@ -11,7 +11,7 @@ const createContent = async (req, res) => {
 
   const content = await Content.create(data);
 
-  res.status(200).json({ message: "Content saved", url: content.shortUrl });
+  res.status(201).json({ message: "Content saved", url: content.shortUrl });
 };
 
 const getContent = async (req, res) => {

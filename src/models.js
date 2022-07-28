@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const shortid = require("shortid");
 const ContentSchema = new mongoose.Schema(
   {
-    title: { type: String, trim: true, unique: true },
+    title: { type: String, trim: true },
     text: { type: String },
     expiration: { type: Number }, //expiration in minutes
     shortenedUrl: {
