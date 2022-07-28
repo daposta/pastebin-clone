@@ -10,5 +10,14 @@ Carbon Senior Engineer Assignment
 
 # Endpoints
 1. To get all content : GET /api/content
-2. To get specific content: GET /api/content/:shortUrl
-3. To create content: POST /api/content
+3. To get specific content: GET /api/content/:shortUrl
+4. To create content: POST /api/content
+
+
+
+Sample data for POST request:
+{
+    "title":"Love don't cost a thing",
+    "text":"Lorem ipsum is shit",
+    "expiration":1
+}
